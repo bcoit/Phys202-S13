@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    133484,       2582]
-NotebookOptionsPosition[    131764,       2523]
-NotebookOutlinePosition[    132100,       2538]
-CellTagsIndexPosition[    132057,       2535]
+NotebookDataLength[    148741,       2998]
+NotebookOptionsPosition[    145928,       2905]
+NotebookOutlinePosition[    146264,       2920]
+CellTagsIndexPosition[    146221,       2917]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1614,7 +1614,7 @@ Cell[BoxData[
              Derivative[1][$CellContext`\[Theta]][
               0] == $CellContext`\[Omega]0$$}, $CellContext`\[Theta], \
 {$CellContext`t, 0, 20}]}, 
-         Plot[{(180/Pi) $CellContext`\[Theta]0$$ 
+         Plot[{((180/Pi) $CellContext`\[Theta]0$$) 
            Cos[$CellContext`omega $CellContext`t], 
            
            ReplaceAll[(180/
@@ -2135,7 +2135,9 @@ Cell[BoxData[
  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"g", "=", "9.8"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"g", "=", "9.8"}], ";", 
+    RowBox[{"x0", "=", "0"}], ";", 
+    RowBox[{"y0", "=", "1.5"}], ";", "\[IndentingNewLine]", 
     RowBox[{"Module", "[", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"{", 
@@ -2187,14 +2189,14 @@ Cell[BoxData[
                     RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
                   "]"}]}]}], ")"}]}]}], ",", " ", 
             RowBox[{
-             RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+             RowBox[{"x", "[", "0", "]"}], "\[Equal]", "x0"}], ",", 
             RowBox[{
              RowBox[{
               RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", 
              RowBox[{"V", " ", 
               RowBox[{"Cos", "[", "th", "]"}]}]}], ",", 
             RowBox[{
-             RowBox[{"y", "[", "0", "]"}], "\[Equal]", "2"}], ",", 
+             RowBox[{"y", "[", "0", "]"}], "\[Equal]", "y0"}], ",", 
             RowBox[{
              RowBox[{
               RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", 
@@ -2218,20 +2220,15 @@ Cell[BoxData[
           ",", 
           RowBox[{"{", 
            RowBox[{
-            RowBox[{
-             RowBox[{"xnorm", "[", "t", "]"}], "\[Equal]", " ", 
-             RowBox[{"x0", "+", 
-              RowBox[{"V", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"th", "*", "t"}], "]"}]}]}]}], ",", 
-            RowBox[{
-             RowBox[{"ynorm", "[", "t", "]"}], "\[Equal]", " ", 
-             RowBox[{"y0", "+", 
-              RowBox[{"V", " ", 
-               RowBox[{"Sin", "[", 
-                RowBox[{"th", "*", "t"}], "]"}]}], "-", 
-              RowBox[{"0.5", " ", "g", " ", 
-               RowBox[{"t", "^", "2"}]}]}]}]}], "}"}]}], "}"}], ",", 
+            RowBox[{"x0", "+", 
+             RowBox[{"V", " ", "t", " ", 
+              RowBox[{"Cos", "[", "th", "]"}]}]}], ",", 
+            RowBox[{"y0", "+", 
+             RowBox[{"V", "  ", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"th", " ", "t"}], "]"}]}], "-", 
+             RowBox[{"0.5", " ", "g", " ", 
+              RowBox[{"t", "^", "2"}]}]}]}], "}"}]}], "}"}], ",", 
         RowBox[{"{", 
          RowBox[{"t", ",", "0", ",", "tf"}], "}"}], ",", 
         RowBox[{"PlotStyle", "\[Rule]", " ", 
@@ -2258,7 +2255,7 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{"V", ",", "38", ",", "\"\<initial velocity (m/s)\>\""}], "}"}], 
-     ",", "0", ",", "50", ",", 
+     ",", "0", ",", "100", ",", 
      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
@@ -2274,7 +2271,7 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{"vt", ",", "35", ",", "\"\<terminal velocity (m/s)\>\""}], 
-      "}"}], ",", "0", ",", "50", ",", 
+      "}"}], ",", "0", ",", "100", ",", 
      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
@@ -2307,41 +2304,48 @@ Cell[BoxData[
    3.578368056382203*^9}, {3.5783681453636208`*^9, 3.578368177069919*^9}, {
    3.578368524653365*^9, 3.578368552428594*^9}, {3.578368807946782*^9, 
    3.578368836502437*^9}, {3.578368953070488*^9, 3.5783689716205482`*^9}, {
-   3.578369276537283*^9, 3.578369287615168*^9}}],
+   3.578369276537283*^9, 3.578369287615168*^9}, {3.578410393044222*^9, 
+   3.578410408377797*^9}, {3.578410478686284*^9, 3.5784104897216682`*^9}, {
+   3.57841053223143*^9, 3.578410538205451*^9}, {3.578410827944931*^9, 
+   3.578410918025012*^9}, {3.5784110179582367`*^9, 3.578411027905223*^9}, {
+   3.5784110714000797`*^9, 3.578411091849801*^9}, {3.578411136916362*^9, 
+   3.578411138488501*^9}, {3.578411188765489*^9, 3.578411190243043*^9}, {
+   3.5784113404081173`*^9, 3.5784113407941933`*^9}, {3.578411593156155*^9, 
+   3.578411593441613*^9}, {3.578411736714472*^9, 3.578411738373578*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`tf$$ = 3, $CellContext`th$$ = 
-    Rational[1, 9] Pi, $CellContext`V$$ = 38, $CellContext`vt$$ = 35, 
+   DynamicModuleBox[{$CellContext`tf$$ = 4.2, $CellContext`th$$ = 
+    0.5206477494633405, $CellContext`V$$ = 35.5, $CellContext`vt$$ = 43, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`V$$], 38, "initial velocity (m/s)"}, 0, 50}, {{
+       Hold[$CellContext`V$$], 38, "initial velocity (m/s)"}, 0, 100}, {{
        Hold[$CellContext`th$$], Rational[1, 9] Pi, "angle (rad)"}, 0.1, 
       Rational[1, 2] Pi}, {{
-       Hold[$CellContext`vt$$], 35, "terminal velocity (m/s)"}, 0, 50}, {{
+       Hold[$CellContext`vt$$], 35, "terminal velocity (m/s)"}, 0, 100}, {{
        Hold[$CellContext`tf$$], 3, "time (s)"}, 0.1, 100}}, Typeset`size$$ = {
     500., {148., 152.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`V$2254$$ = 
-    0, $CellContext`th$2255$$ = 0, $CellContext`vt$2256$$ = 
-    0, $CellContext`tf$2257$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`V$14220$$ = 
+    0, $CellContext`th$14221$$ = 0, $CellContext`vt$14222$$ = 
+    0, $CellContext`tf$14223$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`tf$$ = 3, $CellContext`th$$ = 
         Rational[1, 9] Pi, $CellContext`V$$ = 38, $CellContext`vt$$ = 35}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`V$$, $CellContext`V$2254$$, 0], 
-        Hold[$CellContext`th$$, $CellContext`th$2255$$, 0], 
-        Hold[$CellContext`vt$$, $CellContext`vt$2256$$, 0], 
-        Hold[$CellContext`tf$$, $CellContext`tf$2257$$, 0]}, 
+        Hold[$CellContext`V$$, $CellContext`V$14220$$, 0], 
+        Hold[$CellContext`th$$, $CellContext`th$14221$$, 0], 
+        Hold[$CellContext`vt$$, $CellContext`vt$14222$$, 0], 
+        Hold[$CellContext`tf$$, $CellContext`tf$14223$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
-      "Body" :> ($CellContext`g = 9.8; 
-       Module[{$CellContext`result$ = 
+      "Body" :> ($CellContext`g = 9.8; $CellContext`x0 = 0; $CellContext`y0 = 
+        0; Module[{$CellContext`result$ = 
           NDSolve[{
             Derivative[
               2][$CellContext`x][$CellContext`t] == ((-$CellContext`g) (
@@ -2355,9 +2359,10 @@ Cell[BoxData[
                   1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
                 Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
                   Derivative[
-                    1][$CellContext`y][$CellContext`t]^2]), $CellContext`x[0] == 
-             0, Derivative[1][$CellContext`x][0] == $CellContext`V$$ 
-              Cos[$CellContext`th$$], $CellContext`y[0] == 2, 
+                    1][$CellContext`y][$CellContext`t]^2]), $CellContext`x[
+              0] == $CellContext`x0, 
+             Derivative[1][$CellContext`x][0] == $CellContext`V$$ 
+              Cos[$CellContext`th$$], $CellContext`y[0] == $CellContext`y0, 
              Derivative[1][$CellContext`y][0] == $CellContext`V$$ 
               Sin[$CellContext`th$$]}, {$CellContext`x, $CellContext`y}, \
 {$CellContext`t, 0, $CellContext`tf$$}]}, 
@@ -2366,23 +2371,22 @@ Cell[BoxData[
             ReplaceAll[{
               $CellContext`x[$CellContext`t], 
               $CellContext`y[$CellContext`t]}, $CellContext`result$]], \
-{$CellContext`xnorm[$CellContext`t] == $CellContext`x0 + $CellContext`V$$ 
-              Cos[$CellContext`th$$ $CellContext`t], \
-$CellContext`ynorm[$CellContext`t] == $CellContext`y0 + $CellContext`V$$ 
-              Sin[$CellContext`th$$ $CellContext`t] - 
-             0.5 $CellContext`g $CellContext`t^2}}, {$CellContext`t, 
+{$CellContext`x0 + $CellContext`V$$ $CellContext`t 
+             Cos[$CellContext`th$$], $CellContext`y0 + $CellContext`V$$ 
+             Sin[$CellContext`th$$ $CellContext`t] - 
+            0.5 $CellContext`g $CellContext`t^2}}, {$CellContext`t, 
            0, $CellContext`tf$$}, PlotStyle -> {{Blue}, {Red}}, 
           AxesLabel -> {"distance (m)", "height (m)"}, 
           PlotRange -> {{0, 100}, {0, 50}}, ImageSize -> {500, 300}]]), 
       "Specifications" :> {{{$CellContext`V$$, 38, "initial velocity (m/s)"}, 
-         0, 50, Appearance -> 
+         0, 100, Appearance -> 
          "Labeled"}, {{$CellContext`th$$, Rational[1, 9] Pi, "angle (rad)"}, 
          0.1, Rational[1, 2] Pi, Appearance -> 
          "Labeled"}, {{$CellContext`vt$$, 35, "terminal velocity (m/s)"}, 0, 
-         50, Appearance -> "Labeled"}, {{$CellContext`tf$$, 3, "time (s)"}, 
+         100, Appearance -> "Labeled"}, {{$CellContext`tf$$, 3, "time (s)"}, 
          0.1, 100, Appearance -> "Labeled"}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{545., {230., 235.}},
+     ImageSizeCache->{545., {228., 233.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2392,27 +2396,15 @@ $CellContext`ynorm[$CellContext`t] == $CellContext`y0 + $CellContext`V$$
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.578346851482463*^9, 3.5783469029891243`*^9}, 
-   3.578347072010928*^9, {3.578347108158506*^9, 3.5783471210440407`*^9}, 
-   3.578347253520865*^9, {3.578347305708748*^9, 3.578347311510572*^9}, {
-   3.578347384908464*^9, 3.5783474115584784`*^9}, 3.5783474583844957`*^9, {
-   3.578347750946558*^9, 3.578347758172481*^9}, {3.5783477894062157`*^9, 
-   3.578347817084962*^9}, 3.578347868171846*^9, {3.5783479305192947`*^9, 
-   3.578347963005137*^9}, {3.578348080293727*^9, 3.578348092941539*^9}, 
-   3.578348343718193*^9, 3.578348388247704*^9, {3.578348493285289*^9, 
-   3.578348512874642*^9}, 3.5783485552477818`*^9, 3.578348874430966*^9, 
-   3.578349050265051*^9, {3.578349124814101*^9, 3.578349159058134*^9}, 
-   3.578349223917438*^9, 3.578364511258955*^9, {3.578365776427702*^9, 
-   3.578365784312436*^9}, 3.578365824006815*^9, 3.578365916752639*^9, 
-   3.57836597417138*^9, 3.5783670107321453`*^9, {3.578367638648869*^9, 
-   3.5783676705533648`*^9}, 3.578367995696644*^9, 3.578368057327661*^9, {
-   3.5783681469455223`*^9, 3.578368178025601*^9}, {3.578368223446855*^9, 
-   3.578368234976898*^9}, {3.5783683066185207`*^9, 3.578368324052518*^9}, {
-   3.578368528998004*^9, 3.57836857278196*^9}, 3.5783686330930862`*^9, {
-   3.578368800294701*^9, 3.5783688371818857`*^9}, {3.5783688910232964`*^9, 
-   3.5783689157377157`*^9}, 3.578368972656521*^9, {3.57836927753761*^9, 
-   3.578369317139436*^9}}]
+ CellChangeTimes->{3.578411191128613*^9, 3.578411341872007*^9, 
+  3.578411533145796*^9, 3.578411594426525*^9}]
 }, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.578411144374354*^9, 3.578411198860963*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.578411161084723*^9, 3.57841116481535*^9}}],
 
 Cell[CellGroupData[{
 
@@ -2421,28 +2413,47 @@ Cell[BoxData[
   RowBox[{"(*", 
    RowBox[{"Human", " ", "Cannonball"}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"vt", "=", "60"}], " ", ";", " ", 
-   RowBox[{"(*", 
-    RowBox[{"m", "/", "s"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{"incondhc", "=", 
+   RowBox[{"hcwithres", "=", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"0.6", " ", "radians"}], ",", 
-      RowBox[{"60", 
-       RowBox[{"m", "/", "s"}]}]}], "}"}]}]}]}]], "Input",
+      RowBox[{"0.5354", "radians"}], ",", 
+      RowBox[{"31.8", 
+       RowBox[{"m", "/", "s"}]}]}], "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"hcnores", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.6677", "radians"}], ",", 
+      RowBox[{"36.8", " ", 
+       RowBox[{"m", "/", "s"}]}]}], "}"}], " "}]}]}]], "Input",
  CellChangeTimes->{{3.5781905698733463`*^9, 3.578190578347064*^9}, {
   3.578367143028792*^9, 3.578367312985971*^9}, {3.5783673860265303`*^9, 
-  3.578367441045218*^9}, {3.578367473325617*^9, 3.5783674772663527`*^9}}],
+  3.578367441045218*^9}, {3.578367473325617*^9, 3.5783674772663527`*^9}, {
+  3.5784111054070597`*^9, 3.578411128766199*^9}, {3.578411316487596*^9, 
+  3.578411329692645*^9}, {3.5784113703036118`*^9, 3.5784115079411917`*^9}, {
+  3.578411643294218*^9, 3.578411647507001*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"0.6`", " ", "radians"}], ",", 
+   RowBox[{"0.5354`", " ", "radians"}], ",", 
    FractionBox[
-    RowBox[{"60", " ", "m"}], "s"]}], "}"}]], "Output",
- CellChangeTimes->{{3.5783672787554893`*^9, 3.57836729889289*^9}, {
-   3.578367435012126*^9, 3.578367441968835*^9}, 3.578368306722165*^9}]
+    RowBox[{"31.8`", " ", "m"}], "s"]}], "}"}]], "Output",
+ CellChangeTimes->{3.5784115007857447`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"0.6677`", " ", "radians"}], ",", 
+   FractionBox[
+    RowBox[{"36.8`", " ", "m"}], "s"]}], "}"}]], "Output",
+ CellChangeTimes->{3.578411500795258*^9}]
 }, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.57841110947906*^9, 3.5784111105503263`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5784115145726337`*^9, 3.578411514682753*^9}}],
 
 Cell[CellGroupData[{
 
@@ -2451,31 +2462,43 @@ Cell[BoxData[
   RowBox[{"(*", "golfball", "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"vt", "=", "44"}], ";"}], " ", 
-   RowBox[{"(*", 
-    RowBox[{"m", "/", "s"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
     RowBox[{"y0", "=", "0"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{"incondgb", "=", 
+   RowBox[{"gbwithres", "=", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"0.66", " ", "radians"}], ",", 
-      RowBox[{"33.5", 
+      RowBox[{"0.41475", " ", "radians"}], ",", 
+      RowBox[{"38", 
+       RowBox[{"m", "/", "s"}]}]}], "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"gbnores", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.41475", " ", "radians"}], ",", " ", 
+      RowBox[{"35.2", 
        RowBox[{"m", "/", "s"}]}]}], "}"}]}]}]}]], "Input",
  CellChangeTimes->{
   3.578190538027005*^9, 3.5781905755606947`*^9, {3.578367450840536*^9, 
    3.578367471548856*^9}, {3.578367530877738*^9, 3.578367562974153*^9}, {
    3.578367624379202*^9, 3.5783676335393*^9}, {3.578367736183178*^9, 
-   3.5783677421439123`*^9}}],
+   3.5783677421439123`*^9}, {3.578411518161718*^9, 3.5784115191140423`*^9}, {
+   3.5784116267479973`*^9, 3.5784117252035*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"0.66`", " ", "radians"}], ",", 
+   RowBox[{"0.41475`", " ", "radians"}], ",", 
    FractionBox[
-    RowBox[{"33.5`", " ", "m"}], "s"]}], "}"}]], "Output",
+    RowBox[{"38", " ", "m"}], "s"]}], "}"}]], "Output",
  CellChangeTimes->{3.578367564383234*^9, 3.578367634999627*^9, 
-  3.578367743135871*^9, 3.578368306750676*^9}]
+  3.578367743135871*^9, 3.578368306750676*^9, 3.578411726997547*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"0.41475`", " ", "radians"}], ",", 
+   FractionBox[
+    RowBox[{"35.2`", " ", "m"}], "s"]}], "}"}]], "Output",
+ CellChangeTimes->{3.578367564383234*^9, 3.578367634999627*^9, 
+  3.578367743135871*^9, 3.578368306750676*^9, 3.578411727006673*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2485,41 +2508,400 @@ Cell[BoxData[
   RowBox[{"(*", "baseball", "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"vt", "=", "43"}], ";"}], 
-   RowBox[{"(*", 
-    RowBox[{"m", "/", "s"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
     RowBox[{"y0", "=", "1.5"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{"incondbb", "=", 
+   RowBox[{"bbwithres", "=", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"0.68", " ", "radians"}], ",", 
-      RowBox[{"33", 
+      RowBox[{"0.5206", "radians"}], ",", 
+      RowBox[{"35.5", 
+       RowBox[{"m", "/", "s"}]}]}], "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"bbnores", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.41475", " ", "radians"}], ",", 
+      RowBox[{"35.3", 
        RowBox[{"m", "/", "s"}]}]}], "}"}]}]}]}]], "Input",
  CellChangeTimes->{{3.57819055777339*^9, 3.5781905626994877`*^9}, {
   3.578367574797945*^9, 3.5783676014104967`*^9}, {3.5783677503039923`*^9, 
-  3.5783677587604103`*^9}, {3.578367799093175*^9, 3.578367825158965*^9}}],
+  3.5783677587604103`*^9}, {3.578367799093175*^9, 3.578367825158965*^9}, {
+  3.578411523333312*^9, 3.5784115236932383`*^9}, {3.578411775027329*^9, 
+  3.578411849001975*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"0.68`", " ", "radians"}], ",", 
+   RowBox[{"0.5206`", " ", "radians"}], ",", 
    FractionBox[
-    RowBox[{"33", " ", "m"}], "s"]}], "}"}]], "Output",
- CellChangeTimes->{3.578367825960182*^9, 3.578368306786224*^9}]
+    RowBox[{"35.5`", " ", "m"}], "s"]}], "}"}]], "Output",
+ CellChangeTimes->{3.578367825960182*^9, 3.578368306786224*^9, 
+  3.578411850814822*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"0.41475`", " ", "radians"}], ",", 
+   FractionBox[
+    RowBox[{"35.3`", " ", "m"}], "s"]}], "}"}]], "Output",
+ CellChangeTimes->{3.578367825960182*^9, 3.578368306786224*^9, 
+  3.578411850823101*^9}]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"Civil", " ", "War", " ", "era", " ", "cannonball"}], "*)"}], 
   "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"g", "=", "9.8"}], ";", 
+     RowBox[{"x0", "=", "0"}], ";", 
+     RowBox[{"y0", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Module", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"result", " ", "=", " ", 
+         RowBox[{"NDSolve", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "g"}], " ", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"x", "'"}], "[", "t", "]"}], "/", 
+                  RowBox[{"vt", "^", "2"}]}]}], ")"}], " ", 
+               RowBox[{"Sqrt", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+                "]"}]}]}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"y", "''"}], "[", "t", "]"}], "\[Equal]", 
+              RowBox[{
+               RowBox[{"-", "g"}], " ", 
+               RowBox[{"(", 
+                RowBox[{"1", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
+                    RowBox[{"vt", "^", "2"}]}], ")"}], " ", 
+                  RowBox[{"Sqrt", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+                   "]"}]}]}], ")"}]}]}], ",", " ", 
+             RowBox[{
+              RowBox[{"x", "[", "0", "]"}], "\[Equal]", "x0"}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", 
+              RowBox[{"V", " ", 
+               RowBox[{"Cos", "[", "th", "]"}]}]}], ",", 
+             RowBox[{
+              RowBox[{"y", "[", "0", "]"}], "\[Equal]", "y0"}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", 
+              RowBox[{"V", " ", 
+               RowBox[{"Sin", "[", "th", "]"}]}]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"t", ",", "0", ",", "tf"}], "}"}]}], "]"}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ParametricPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Evaluate", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"x", "[", "t", "]"}], ",", 
+               RowBox[{"y", "[", "t", "]"}]}], "}"}], "/.", "result"}], "]"}],
+            ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x0", "+", 
+              RowBox[{"V", " ", "t", " ", 
+               RowBox[{"Cos", "[", "th", "]"}]}]}], ",", 
+             RowBox[{"y0", "+", 
+              RowBox[{"V", "  ", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"th", " ", "t"}], "]"}]}], "-", 
+              RowBox[{"0.5", " ", "g", " ", 
+               RowBox[{"t", "^", "2"}]}]}]}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "tf"}], "}"}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "Blue", "}"}], ",", 
+            RowBox[{"{", "Red", "}"}]}], "}"}]}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<distance (m)\>\"", ",", "\"\<height (m)\>\""}], 
+           "}"}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "6000"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "500"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"700", ",", "300"}], "}"}]}]}], "]"}]}], "]"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"V", ",", "439", ",", "\"\<initial velocity (m/s)\>\""}], 
+       "}"}], ",", "0", ",", "500", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"th", ",", 
+        RowBox[{"5", " ", 
+         RowBox[{"Pi", "/", "180"}]}], ",", "\"\<angle (rad)\>\""}], "}"}], 
+      ",", "0", ",", 
+      RowBox[{"Pi", "/", "2"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"vt", ",", "135", ",", "\"\<terminal velocity (m/s)\>\""}], 
+       "}"}], ",", "0", ",", "150", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"tf", ",", "10", ",", "\"\<time (s)\>\""}], "}"}], ",", "0.1", 
+      ",", "100", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.57836801077703*^9, 3.578368044832199*^9}, {
+  3.578411526328855*^9, 3.5784115265911913`*^9}, {3.578411855743308*^9, 
+  3.578411907715509*^9}, {3.5784119422569027`*^9, 3.578412026835657*^9}, {
+  3.5784121556158457`*^9, 3.578412159805395*^9}, {3.578412230369347*^9, 
+  3.578412231480154*^9}, {3.578412410517662*^9, 3.578412411375267*^9}, {
+  3.578412457031691*^9, 3.578412458326173*^9}, {3.578412517068433*^9, 
+  3.578412518244356*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`tf$$ = 44.2, $CellContext`th$$ = 
+    0.37699111843077515`, $CellContext`V$$ = 439, $CellContext`vt$$ = 135, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`V$$], 439, "initial velocity (m/s)"}, 0, 500}, {{
+       Hold[$CellContext`th$$], Rational[1, 36] Pi, "angle (rad)"}, 0, 
+      Rational[1, 2] Pi}, {{
+       Hold[$CellContext`vt$$], 135, "terminal velocity (m/s)"}, 0, 150}, {{
+       Hold[$CellContext`tf$$], 10, "time (s)"}, 0.1, 100}}, 
+    Typeset`size$$ = {700., {148., 152.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`V$19496$$ = 0, $CellContext`th$19497$$ = 
+    0, $CellContext`vt$19498$$ = 0, $CellContext`tf$19499$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`tf$$ = 10, $CellContext`th$$ = 
+        Rational[1, 36] Pi, $CellContext`V$$ = 439, $CellContext`vt$$ = 135}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`V$$, $CellContext`V$19496$$, 0], 
+        Hold[$CellContext`th$$, $CellContext`th$19497$$, 0], 
+        Hold[$CellContext`vt$$, $CellContext`vt$19498$$, 0], 
+        Hold[$CellContext`tf$$, $CellContext`tf$19499$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`g = 9.8; $CellContext`x0 = 0; $CellContext`y0 = 
+        1; Module[{$CellContext`result$ = 
+          NDSolve[{
+            Derivative[
+              2][$CellContext`x][$CellContext`t] == ((-$CellContext`g) (
+                Derivative[
+                 1][$CellContext`x][$CellContext`t]/$CellContext`vt$$^2)) 
+              Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+                Derivative[1][$CellContext`y][$CellContext`t]^2], 
+             Derivative[
+              2][$CellContext`y][$CellContext`t] == (-$CellContext`g) (
+               1 + (Derivative[
+                  1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
+                Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+                  Derivative[
+                    1][$CellContext`y][$CellContext`t]^2]), $CellContext`x[
+              0] == $CellContext`x0, 
+             Derivative[1][$CellContext`x][0] == $CellContext`V$$ 
+              Cos[$CellContext`th$$], $CellContext`y[0] == $CellContext`y0, 
+             Derivative[1][$CellContext`y][0] == $CellContext`V$$ 
+              Sin[$CellContext`th$$]}, {$CellContext`x, $CellContext`y}, \
+{$CellContext`t, 0, $CellContext`tf$$}]}, 
+         ParametricPlot[{
+           Evaluate[
+            ReplaceAll[{
+              $CellContext`x[$CellContext`t], 
+              $CellContext`y[$CellContext`t]}, $CellContext`result$]], \
+{$CellContext`x0 + $CellContext`V$$ $CellContext`t 
+             Cos[$CellContext`th$$], $CellContext`y0 + $CellContext`V$$ 
+             Sin[$CellContext`th$$ $CellContext`t] - 
+            0.5 $CellContext`g $CellContext`t^2}}, {$CellContext`t, 
+           0, $CellContext`tf$$}, PlotStyle -> {{Blue}, {Red}}, 
+          AxesLabel -> {"distance (m)", "height (m)"}, 
+          PlotRange -> {{0, 6000}, {0, 500}}, ImageSize -> {700, 300}]]), 
+      "Specifications" :> {{{$CellContext`V$$, 439, "initial velocity (m/s)"},
+          0, 500, Appearance -> 
+         "Labeled"}, {{$CellContext`th$$, Rational[1, 36] Pi, "angle (rad)"}, 
+         0, Rational[1, 2] Pi, Appearance -> 
+         "Labeled"}, {{$CellContext`vt$$, 135, "terminal velocity (m/s)"}, 0, 
+         150, Appearance -> "Labeled"}, {{$CellContext`tf$$, 10, "time (s)"}, 
+         0.1, 100, Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{745., {228., 233.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.578411909095039*^9, {3.57841194406406*^9, 3.57841202782131*^9}, 
+   3.578412163090036*^9, 3.578412232557979*^9, 3.578412412108461*^9, 
+   3.57841245901929*^9, 3.5784125189894533`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"5", "degrees"}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{
-    RowBox[{"vt", "=", "135"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"y0", "=", "1"}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
- CellChangeTimes->{{3.57836801077703*^9, 3.578368044832199*^9}}]
+   RowBox[{"dist", "=", 
+    RowBox[{"1650", "m"}]}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.5784120496664467`*^9, 3.578412057171609*^9}, {
+  3.578412116767847*^9, 3.578412137787395*^9}, {3.5784123803096743`*^9, 
+  3.5784123818974667`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1650", " ", "m"}]], "Output",
+ CellChangeTimes->{3.5784121393005257`*^9, 3.5784123826283417`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"10", "degrees"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"dist", "=", 
+   RowBox[{"2320", "m"}]}]}]], "Input",
+ CellChangeTimes->{{3.5784121434377327`*^9, 3.5784121494057217`*^9}, {
+  3.578412195040464*^9, 3.578412210977688*^9}, {3.578412377248496*^9, 
+  3.578412378429679*^9}}],
+
+Cell[BoxData[
+ RowBox[{"2320", " ", "m"}]], "Output",
+ CellChangeTimes->{3.578412212852071*^9, 3.578412384836866*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"15", "degrees"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"dist", "=", 
+   RowBox[{"2720", "m"}]}]}]], "Input",
+ CellChangeTimes->{{3.578412220184588*^9, 3.5784122515378447`*^9}, {
+  3.578412373683967*^9, 3.578412374756404*^9}}],
+
+Cell[BoxData[
+ RowBox[{"2720", " ", "m"}]], "Output",
+ CellChangeTimes->{3.578412252572143*^9, 3.578412385838616*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"to", " ", "stay", " ", "within", " ", "1000", "m"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"15", "degrees"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"v0", "=", 
+   RowBox[{"173", 
+    RowBox[{"m", "/", "s"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.5784123375829887`*^9, 3.578412369722673*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"173", " ", "m"}], "s"]], "Output",
+ CellChangeTimes->{3.578412387166444*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"10", "degrees"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"v0", "=", 
+   RowBox[{"209", 
+    RowBox[{"m", "/", "s"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.578412395545418*^9, 3.578412440922694*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"209", " ", "m"}], "s"]], "Output",
+ CellChangeTimes->{3.578412441545208*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"5", "degrees"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"v0", "=", 
+   RowBox[{"295", 
+    RowBox[{"m", "/", "s"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.578412442642685*^9, 3.578412489934544*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"295", " ", "m"}], "s"]], "Output",
+ CellChangeTimes->{3.578412490768469*^9}]
+}, Open  ]]
 },
 WindowSize->{1366, 706},
 WindowMargins->{{0, Automatic}, {Automatic, 22}},
@@ -2546,44 +2928,78 @@ Cell[5913, 156, 79161, 1303, 230, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[85111, 1464, 4320, 109, 181, "Input"],
-Cell[89434, 1575, 3811, 72, 456, "Output"]
+Cell[89434, 1575, 3813, 72, 456, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93282, 1652, 1360, 46, 48, "Input"],
-Cell[94645, 1700, 1096, 27, 40, "Output"],
-Cell[95744, 1729, 1229, 32, 66, "Output"]
+Cell[93284, 1652, 1360, 46, 48, "Input"],
+Cell[94647, 1700, 1096, 27, 40, "Output"],
+Cell[95746, 1729, 1229, 32, 66, "Output"]
 }, Open  ]],
-Cell[96988, 1764, 142, 2, 29, "Input"],
-Cell[97133, 1768, 90, 1, 29, "Input"],
-Cell[97226, 1771, 120, 2, 29, "Input"],
-Cell[97349, 1775, 94, 1, 29, "Input"],
+Cell[96990, 1764, 142, 2, 29, "Input"],
+Cell[97135, 1768, 90, 1, 29, "Input"],
+Cell[97228, 1771, 120, 2, 29, "Input"],
+Cell[97351, 1775, 94, 1, 29, "Input"],
 Cell[CellGroupData[{
-Cell[97468, 1780, 2479, 59, 174, "Input"],
-Cell[99950, 1841, 916, 28, 29, "Output"]
+Cell[97470, 1780, 2479, 59, 174, "Input"],
+Cell[99952, 1841, 916, 28, 29, "Output"]
 }, Open  ]],
-Cell[100881, 1872, 92, 1, 29, "Input"],
+Cell[100883, 1872, 92, 1, 29, "Input"],
 Cell[CellGroupData[{
-Cell[100998, 1877, 937, 23, 29, "Input"],
-Cell[101938, 1902, 12894, 215, 369, "Output"]
+Cell[101000, 1877, 937, 23, 29, "Input"],
+Cell[101940, 1902, 12894, 215, 369, "Output"]
 }, Open  ]],
-Cell[114847, 2120, 321, 9, 84, "Input"],
+Cell[114849, 2120, 321, 9, 84, "Input"],
 Cell[CellGroupData[{
-Cell[115193, 2133, 7358, 176, 174, "Input"],
-Cell[122554, 2311, 5803, 102, 482, "Output"]
+Cell[115195, 2133, 7768, 180, 174, "Input"],
+Cell[122966, 2315, 4521, 84, 478, "Output"]
+}, Open  ]],
+Cell[127502, 2402, 90, 1, 29, InheritFromParent],
+Cell[127595, 2405, 91, 1, 29, InheritFromParent],
+Cell[CellGroupData[{
+Cell[127711, 2410, 931, 22, 66, "Input"],
+Cell[128645, 2434, 204, 6, 45, "Output"],
+Cell[128852, 2442, 202, 6, 45, "Output"]
+}, Open  ]],
+Cell[129069, 2451, 93, 1, 29, "Input"],
+Cell[129165, 2454, 94, 1, 29, InheritFromParent],
+Cell[CellGroupData[{
+Cell[129284, 2459, 927, 23, 84, "Input"],
+Cell[130214, 2484, 291, 7, 45, "Output"],
+Cell[130508, 2493, 294, 7, 45, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[128394, 2418, 651, 16, 66, "Input"],
-Cell[129048, 2436, 293, 7, 45, "Output"]
+Cell[130839, 2505, 874, 22, 84, "Input"],
+Cell[131716, 2529, 249, 7, 45, "Output"],
+Cell[131968, 2538, 250, 7, 45, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[129378, 2448, 756, 20, 84, "Input"],
-Cell[130137, 2470, 269, 7, 45, "Output"]
+Cell[132255, 2550, 6213, 159, 192, "Input"],
+Cell[138471, 2711, 4631, 86, 478, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[130443, 2482, 703, 18, 84, "Input"],
-Cell[131149, 2502, 219, 6, 45, "Output"]
+Cell[143139, 2802, 373, 9, 66, "Input"],
+Cell[143515, 2813, 121, 2, 29, "Output"]
 }, Open  ]],
-Cell[131383, 2511, 377, 10, 84, "Input"]
+Cell[CellGroupData[{
+Cell[143673, 2820, 334, 8, 48, "Input"],
+Cell[144010, 2830, 117, 2, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144164, 2837, 283, 7, 48, "Input"],
+Cell[144450, 2846, 117, 2, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144604, 2853, 373, 10, 66, "Input"],
+Cell[144980, 2865, 115, 3, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145132, 2873, 254, 7, 48, "Input"],
+Cell[145389, 2882, 115, 3, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145541, 2890, 253, 7, 48, "Input"],
+Cell[145797, 2899, 115, 3, 45, "Output"]
+}, Open  ]]
 }
 ]
 *)
