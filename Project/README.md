@@ -1,4 +1,4 @@
-Monte Carlo Glauber Model of Nuclear Interactions
+Project 2: One Dimensional Traffic Flows
 -
 
 Bonnie Coit
