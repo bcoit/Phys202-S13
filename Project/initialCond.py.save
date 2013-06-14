@@ -1,0 +1,8 @@
+def create_road(L,cars,v_max):
+    """Sets up the road, initial position, and initial velocity arrays to be 
+used as inputs for the traffic flow functions"""
+    road = np.zeros(L, int)
+    x = np.zeros(cars, int)
+    v = np.zeros(cars, int)
+    each_car = 1
+    while(each_car <= cars
