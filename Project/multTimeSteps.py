@@ -26,4 +26,4 @@ probability p, this functions returns the density,and the positions of the cars,
             pos[i] = x
             v_avg[i] = average(v)
             current[i] = density * v_avg[i]
-return density, pos, v_avg, current
+    return density, pos, v_avg, current
