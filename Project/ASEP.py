@@ -24,14 +24,14 @@ step.  The cars are moved one at a time following the ASEP model of traffic flow
     L = len(road)
     n = range(len(x))
     i = 0
-    random.shuffle(n)
+    np.random.shuffle(n)
     for j in range(len(n)):
         i = n[j]
         gi = g_for_ASEP(x, v, i, road)
         if gi == 0:
             v[i] = 0
-        elif v[i] > g[i]:
-            v[i] = g[i]
+        elif v[i] > gi:
+            v[i] = gi
         elif v[i] < gi and v[i] < v_max:
             v[i] += 1
         x[i] += v[i]

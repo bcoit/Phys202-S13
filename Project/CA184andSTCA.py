@@ -55,7 +55,7 @@ of random slow-downs is allowed, following the STCA model of traffic flow"""
         elif v[i] < gi[i] and v[i] < v_max:
             v[i] += 1
         if v[i] > 0: #Allowing the possibility for random slowdowns
-            if random_sample < (1/100.)*p:
+            if np.random.random_sample < (1/100.)*p:
                 v[i] -= 1
         x[i] += v[i]
         if x[i] > L:
